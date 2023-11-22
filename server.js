@@ -10,7 +10,7 @@ const users = [];
 
 
 app.get('/api/users', (request, response) => {
-    res.json(users)
+    response.json(users)
 });
 
 
