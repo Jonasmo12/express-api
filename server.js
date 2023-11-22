@@ -13,15 +13,23 @@ app.get('/api/users', (request, response) => {
     res.json(users)
 });
 
+
+
 app.post('/api/user/', (request, response) => {
     // set data to user object
     const user = {
         id: request.body.id, // get id from user in the request
-        name: request.body.name // get name from user in the request
+        firstName: request.body.firstName, // get name from user in the request
+        lastName: request.body.lastName,
+        email: request.body.email
     }
+
     users.push(user); //Insert data into the array
+
     response.json('succesfully added: ' + user); 
 });
+
+
 
 app.get('/', (request, response) => {
     response.json("Server Online")
