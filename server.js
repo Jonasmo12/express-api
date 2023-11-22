@@ -20,10 +20,10 @@ app.post('/api/user/', (request, response) => {
         name: request.body.name // get name from user in the request
     }
     users.push(user); //Insert data into the array
-    resp.json('succesfully added: ' + user); 
+    response.json('succesfully added: ' + user); 
 });
 
-app.get('/', (req, res) => {
+app.get('/', (request, response) => {
     res.json("Server Online")
 })
 
