@@ -24,7 +24,7 @@ app.post('/api/user/', (request, response) => {
 });
 
 app.get('/', (request, response) => {
-    res.json("Server Online")
+    response.json("Server Online")
 })
 
 app.listen(port, () => {
